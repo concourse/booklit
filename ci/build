@@ -21,7 +21,7 @@ pushd booklit
 
     echo "building $os binary..."
     GOOS=$os go build \
-      --ldflags "-X github.com/vito/booklit.Version=${version}" \
+      --ldflags "-X github.com/snedelchev-sn/booklit.Version=${version}" \
       -o $assets/booklit_${os}_amd64${ext} \
       github.com/vito/booklit/cmd/booklit
   done

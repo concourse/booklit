@@ -5,7 +5,7 @@ image_resource:
   type: registry-image
   source:
     repository: golang
-    tag: 1
+    tag: 1.20.3
 
 inputs:
 - name: booklit

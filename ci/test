@@ -14,8 +14,8 @@ function emit_coveralls() {
   if [ -n "$COVERALLS_TOKEN" ]; then
     echo "emitting code coverage..."
     go get github.com/mattn/goveralls
-    goveralls -service concourse \
-      -coverprofile <(find . -name '*.coverprofile' | xargs cat | grep -v 'booklit.peg.go\|render/bindata.go')
+    #goveralls -service concourse \
+    #  -coverprofile <(find . -name '*.coverprofile' | xargs cat | grep -v 'booklit.peg.go\|render/bindata.go')
   fi
 }
 

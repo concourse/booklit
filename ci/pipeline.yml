@@ -24,7 +24,7 @@ resources:
 - name: booklit
   type: git
   source:
-    uri: https://github.com/vito/booklit
+    uri: https://github.com/snedelchev-sn/booklit.git
     branch: master
 
 - name: version
@@ -32,7 +32,7 @@ resources:
   source:
     driver: git
     initial_version: 0.0.0
-    uri: git@github.com:vito/booklit
+    uri: git@github.com:snedelchev-sn/booklit.git
     branch: version
     file: version
     private_key: ((repo_private_key))
@@ -40,26 +40,26 @@ resources:
 - name: release-notes
   type: git
   source:
-    uri: https://github.com/vito/booklit
+    uri: https://github.com/snedelchev-sn/booklit.git
     branch: version
 
 - name: booklit-rel
   type: github-release
   source:
-    owner: vito
+    owner: snedelchev-sn
     repository: booklit
     access_token: ((releases_access_token))
 
 - name: booklit-pr
   type: pull-request
   source:
-    repository: vito/booklit
+    repository: snedelchev-sn/booklit
     access_token: ((prs_access_token))
 
 - name: gh-status
   type: github-status
   source:
-    repo: vito/booklit
+    repo: snedelchev-sn/booklit
     access_token: ((prs_access_token))
 
 jobs:
