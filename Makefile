@@ -24,7 +24,7 @@ render/text/bindata.go: render/text render/text/*.tmpl
 	go-bindata -o render/text/bindata.go -pkg text render/text/*.tmpl
 
 docs/outputs/index.html: docs/hello/*.lit docs/hello/html/*.tmpl docs/hello/go/*
-	cd docs/hello && booklit --plugin github.com/vito/booklit/docs/hello/go --html-templates html -i index.lit -o ../outputs
+	cd docs/hello && booklit --plugin github.com/vito/booklit/docs/hello/go --html-templates html -i index.lit -o ../outputs/
 
 clean:
 	rm -f $(targets)
